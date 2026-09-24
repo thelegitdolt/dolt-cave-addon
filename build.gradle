@@ -95,6 +95,7 @@ dependencies {
     implementation "com.teamabnormals:blueprint:${project.minecraft_version}-${project.blueprint}"
 
     implementation "curse.maven:alexs-caves-neo-1613404:${project.alexCaves}"
+    implementation "curse.maven:caverns_and-1613404:${project.alexCaves}"
     implementation "curse.maven:citadel-331936:${project.citadel}"
 }
 
