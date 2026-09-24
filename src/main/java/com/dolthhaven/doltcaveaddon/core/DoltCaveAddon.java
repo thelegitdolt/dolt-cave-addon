@@ -1,5 +1,7 @@
-package com.dolthhaven.doltcaveaddon;
+package com.dolthhaven.doltcaveaddon.core;
 
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -14,5 +16,6 @@ public class DoltCaveAddon {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public DoltCaveAddon(IEventBus modEventBus, ModContainer modContainer) {
+        modContainer.registerConfig(ModConfig.Type.COMMON, DCAConfig.COMMON_SPEC);
     }
 }

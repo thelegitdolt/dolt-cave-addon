@@ -1,8 +1,10 @@
 {
   "required": true,
-  "package": "com.dolthhaven.doltcaveaddon.mixin",
+  "package": "com.dolthhaven.doltcaveaddon.core.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "AcidBlockMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
