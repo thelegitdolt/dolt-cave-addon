@@ -22,8 +22,8 @@ Umm adds dolts
 [[mixins]]
 config="${mod_id}.mixins.json"
 
-#[[accessTransformers]]
-#file="META-INF/accesstransformer.cfg"
+[[accessTransformers]]
+    file="META-INF/accesstransformer.cfg"
 
 [[dependencies.${mod_id}]] #optional
     modId="neoforge" #mandatory
@@ -36,5 +36,27 @@ config="${mod_id}.mixins.json"
     modId="minecraft"
     type="required"
     versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+
+[[dependencies.${mod_id}]]
+    modId="alexscaves"
+    type="required"
+    versionRange="[2.0.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="blueprint"
+    type="required"
+    versionRange="[8.1.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="citadel"
+    type="required"
+    versionRange="[2.7.1,)"
     ordering="NONE"
     side="BOTH"

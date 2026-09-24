@@ -9,6 +9,8 @@ tasks.named('wrapper', Wrapper).configure {
     distributionType = Wrapper.DistributionType.BIN
 }
 
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
 version = mod_version
 group = mod_group_id
 
@@ -19,13 +21,27 @@ sourceSets.main.resources {
 }
 
 repositories {
+    repositories {
+        exclusiveContent {
+            forRepository {
+                maven {
+                    url "https://cursemaven.com"
+                }
+            }
+            filter {
+                includeGroup "curse.maven"
+            }
+        }
+    }
+
+    maven { url = "https://maven.blamejared.com/" }
+    maven { url = "https://modmaven.dev" }
+    maven { url "https://maven.teamabnormals.com/" }
 }
 
 base {
     archivesName = mod_id
 }
-
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
     version = project.neo_version
@@ -76,6 +92,10 @@ configurations {
 }
 
 dependencies {
+    implementation "com.teamabnormals:blueprint:${project.minecraft_version}-${project.blueprint}"
+
+    implementation "curse.maven:alexs-caves-neo-1613404:${project.alexCaves}"
+    implementation "curse.maven:citadel-331936:${project.citadel}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
