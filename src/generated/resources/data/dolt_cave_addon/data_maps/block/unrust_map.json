@@ -1,0 +1,9 @@
+{
+  "values": {
+    "alexscaves:rusty_barrel": "alexscaves:metal_barrel",
+    "alexscaves:rusty_rebar": "alexscaves:metal_rebar",
+    "alexscaves:rusty_scaffolding": "alexscaves:metal_scaffolding",
+    "alexscaves:rusty_scrap_metal": "alexscaves:scrap_metal",
+    "alexscaves:rusty_scrap_metal_plate": "alexscaves:scrap_metal_plate"
+  }
+}

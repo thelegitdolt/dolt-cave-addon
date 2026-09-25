@@ -1,12 +1,13 @@
 package com.dolthhaven.doltcaveaddon.core;
 
 import com.dolthhaven.doltcaveaddon.core.data.DCABlockStatesModel;
-import com.dolthhaven.doltcaveaddon.core.data.DCADataMaps;
 import com.dolthhaven.doltcaveaddon.core.data.DCALootTables;
 import com.dolthhaven.doltcaveaddon.core.data.DCARecipes;
 import com.dolthhaven.doltcaveaddon.core.data.tags.DCABlockTags;
+import com.dolthhaven.doltcaveaddon.core.data.tags.DCADataMaps;
 import com.dolthhaven.doltcaveaddon.core.data.tags.DCAItemTags;
 import com.dolthhaven.doltcaveaddon.core.registry.DCABlocks;
+import com.dolthhaven.doltcaveaddon.core.registry.DCAParticles;
 import com.mojang.logging.LogUtils;
 import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
 import net.minecraft.resources.ResourceLocation;
@@ -29,6 +30,8 @@ public class DoltCaveAddon {
     public DoltCaveAddon(IEventBus bus, ModContainer modContainer) {
         DCABlocks.HELPER.register(bus);
         DCABlocks.ITEMS.register(bus);
+
+        DCAParticles.PARTICLES.register(bus);
 
         bus.addListener(this::dataSetup);
         bus.addListener(this::clientSetup);
