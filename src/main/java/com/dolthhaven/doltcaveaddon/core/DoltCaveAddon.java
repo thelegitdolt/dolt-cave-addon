@@ -22,7 +22,6 @@ public class DoltCaveAddon {
         bus.addListener(this::dataSetup);
         modContainer.registerConfig(ModConfig.Type.COMMON, DCAConfig.COMMON_SPEC);
 
-        DCACriteriaTriggers.TRIGGERS.register(bus);
         DCATrackedData.registerTrackedData();
     }
 

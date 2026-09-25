@@ -19,7 +19,7 @@ public class DCASpawnCompat {
             UUID playerUUID = (UUID) octoClass.getMethod("getOctopusOwner").invoke(a);
             if (playerUUID != null) {
                 if (level.getPlayerByUUID(playerUUID) instanceof ServerPlayer serverPlayer) {
-                    DCACriteriaTriggers.USE_OCTOPUS_TO_PREVENT_VALLUMRAPTOR_TOMFOOLERY.trigger(serverPlayer);
+                    DCACriteriaTriggers.USE_OCTOPUS_TO_PREVENT_VALLUMRAPTOR_TOMFOOLERY.get().trigger(serverPlayer);
                 }
                 return true;
             }
