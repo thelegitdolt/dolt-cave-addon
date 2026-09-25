@@ -6,6 +6,7 @@
     "AcidBlockMixin",
     "BiomeCrucibleMixin",
     "BiomeTreatItemMixin",
+    "BlockStateBaseMixin",
     "CycadMixin",
     "EnigmaticEngineMixin",
     "GingerbreadManMixin",
