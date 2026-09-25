@@ -13,7 +13,9 @@
     "NuclearFurnaceBlockEntityMixin",
     "SackOfSatingItemMixin",
     "SubmarineMixin",
-    "TremorzillaMixin"
+    "TremorzillaMixin",
+    "lootchestfeature.AnimalLootChestGoalMixin",
+    "lootchestfeature.VallumRaptorMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -21,6 +21,8 @@ public class DoltCaveAddon {
         bus.addListener(this::dataSetup);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, DCAConfig.COMMON_SPEC);
+
+        DCATrackedData.registerTrackedData();
     }
 
     public static ResourceLocation rl(String path) {
