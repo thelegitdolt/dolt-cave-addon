@@ -1,10 +1,10 @@
 {
   "values": [
-    "dolt_mod_how:abyssal_chasm",
-    "dolt_mod_how:candy_cavity",
-    "dolt_mod_how:forlorn_hollows",
-    "dolt_mod_how:magnetic_caves",
-    "dolt_mod_how:primordial_caves",
-    "dolt_mod_how:toxic_caves"
+    "dolt_cave_addon:abyssal_chasm",
+    "dolt_cave_addon:candy_cavity",
+    "dolt_cave_addon:forlorn_hollows",
+    "dolt_cave_addon:magnetic_caves",
+    "dolt_cave_addon:primordial_caves",
+    "dolt_cave_addon:toxic_caves"
   ]
 }
