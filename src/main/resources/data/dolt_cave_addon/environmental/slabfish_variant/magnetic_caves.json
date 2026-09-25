@@ -9,12 +9,12 @@
     },
     {
       "type": "environmental:in_biome_key",
-      "biome": "alexscaves:toxic_caves"
+      "biome": "alexscaves:magnetic_caves"
     }
   ],
   "description": {
-    "translate": "slabfish.type.dolt_cave_addon.toxic_caves"
+    "translate": "slabfish_variant.dolt_cave_addon.magnetic_caves"
   },
   "priority": 5,
-  "texture": "dolt_cave_addon:type/toxic_caves"
+  "texture": "dolt_cave_addon:variant/magnetic_caves"
 }

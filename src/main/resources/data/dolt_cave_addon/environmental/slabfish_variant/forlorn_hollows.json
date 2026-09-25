@@ -13,8 +13,8 @@
     }
   ],
   "description": {
-    "translate": "slabfish.type.dolt_cave_addon.forlorn_hollows"
+    "translate": "slabfish_variant.dolt_cave_addon.forlorn_hollows"
   },
   "priority": 5,
-  "texture": "dolt_cave_addon:type/forlorn_hollows"
+  "texture": "dolt_cave_addon:variant/forlorn_hollows"
 }

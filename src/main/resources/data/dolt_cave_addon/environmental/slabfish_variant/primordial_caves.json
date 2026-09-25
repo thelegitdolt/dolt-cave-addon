@@ -9,12 +9,12 @@
     },
     {
       "type": "environmental:in_biome_key",
-      "biome": "alexscaves:candy_cavity"
+      "biome": "alexscaves:primordial_caves"
     }
   ],
   "description": {
-    "translate": "slabfish.type.dolt_cave_addon.candy_cavity"
+    "translate": "slabfish_variant.dolt_cave_addon.primordial_caves"
   },
   "priority": 5,
-  "texture": "dolt_cave_addon:type/candy_cavity"
+  "texture": "dolt_cave_addon:variant/primordial_caves"
 }

@@ -9,12 +9,12 @@
     },
     {
       "type": "environmental:in_biome_key",
-      "biome": "alexscaves:magnetic_caves"
+      "biome": "alexscaves:candy_cavity"
     }
   ],
   "description": {
-    "translate": "slabfish.type.dolt_cave_addon.magnetic_caves"
+    "translate": "slabfish_variant.dolt_cave_addon.candy_cavity"
   },
   "priority": 5,
-  "texture": "dolt_cave_addon:type/magnetic_caves"
+  "texture": "dolt_cave_addon:variant/candy_cavity"
 }

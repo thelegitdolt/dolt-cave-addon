@@ -9,12 +9,12 @@
     },
     {
       "type": "environmental:in_biome_key",
-      "biome": "alexscaves:primordial_caves"
+      "biome": "alexscaves:abyssal_chasm"
     }
   ],
   "description": {
-    "translate": "slabfish.type.dolt_cave_addon.primordial_caves"
+    "translate": "slabfish_variant.dolt_cave_addon.abyssal_chasm"
   },
   "priority": 5,
-  "texture": "dolt_cave_addon:type/primordial_caves"
+  "texture": "dolt_cave_addon:variant/abyssal_chasm"
 }
