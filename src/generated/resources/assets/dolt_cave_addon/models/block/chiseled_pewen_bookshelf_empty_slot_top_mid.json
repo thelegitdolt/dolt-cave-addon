@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_chiseled_bookshelf_slot_top_mid",
+  "textures": {
+    "texture": "dolt_cave_addon:block/chiseled_pewen_bookshelf_empty"
+  }
+}

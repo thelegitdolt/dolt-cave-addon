@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "dolt_cave_addon:block/thornwood_cabinet_front_open",
+    "side": "dolt_cave_addon:block/thornwood_cabinet_side",
+    "top": "dolt_cave_addon:block/thornwood_cabinet_top"
+  }
+}

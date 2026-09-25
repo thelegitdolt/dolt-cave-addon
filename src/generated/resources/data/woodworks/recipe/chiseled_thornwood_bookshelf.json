@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "woodworks:config",
+      "value": "wooden_bookshelves"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "chiseled_wooden_bookshelf",
+  "key": {
+    "#": {
+      "item": "alexscaves:thornwood_planks"
+    },
+    "X": {
+      "item": "alexscaves:thornwood_slab"
+    }
+  },
+  "pattern": [
+    "###",
+    "XXX",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dolt_cave_addon:chiseled_thornwood_bookshelf"
+  }
+}

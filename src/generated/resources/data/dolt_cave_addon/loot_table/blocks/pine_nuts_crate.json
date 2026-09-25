@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dolt_cave_addon:pine_nuts_crate"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "dolt_cave_addon:blocks/pine_nuts_crate"
+}

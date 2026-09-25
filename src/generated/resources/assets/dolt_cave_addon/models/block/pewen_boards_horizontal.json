@@ -1,0 +1,6 @@
+{
+  "parent": "blueprint:block/template_boards_horizontal",
+  "textures": {
+    "all": "dolt_cave_addon:block/pewen_boards"
+  }
+}

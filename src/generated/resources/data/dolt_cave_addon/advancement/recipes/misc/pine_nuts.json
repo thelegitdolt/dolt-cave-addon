@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pine_nuts_crate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dolt_cave_addon:pine_nuts_crate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dolt_cave_addon:pine_nuts"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pine_nuts_crate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dolt_cave_addon:pine_nuts"
+    ]
+  }
+}

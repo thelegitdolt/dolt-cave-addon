@@ -1,4 +1,27 @@
 {
+  "block.dolt_cave_addon.pine_nuts_crate": "Crate of Pine Nuts",
+
+  "block.dolt_cave_addon.pewen_chest": "Pewen Chest",
+  "block.dolt_cave_addon.trapped_pewen_chest": "Trapped Pewen Chest",
+  "block.dolt_cave_addon.pewen_boards": "Pewen Boards",
+  "block.dolt_cave_addon.pewen_beehive": "Pewen Beehive",
+  "block.dolt_cave_addon.pewen_ladder": "Pewen Ladder",
+  "block.dolt_cave_addon.chiseled_pewen_bookshelf": "Chiseled Pewen Bookshelf",
+  "block.dolt_cave_addon.pewen_bookshelf": "Pewen Bookshelf",
+
+  "block.dolt_cave_addon.ancient_leaf_pile": "Pile of Ancient Leaves",
+
+  "block.dolt_cave_addon.thornwood_chest": "Thornwood Chest",
+  "block.dolt_cave_addon.trapped_thornwood_chest": "Trapped Thornwood Chest",
+  "block.dolt_cave_addon.thornwood_boards": "Thornwood Boards",
+  "block.dolt_cave_addon.thornwood_beehive": "Thornwood Beehive",
+  "block.dolt_cave_addon.thornwood_ladder": "Thornwood Ladder",
+  "block.dolt_cave_addon.chiseled_thornwood_bookshelf": "Chiseled Thornwood Bookshelf",
+  "block.dolt_cave_addon.thornwood_bookshelf": "Thornwood Bookshelf",
+
+  "block.dolt_cave_addon.pewen_cabinet": "Pewen Cabinet",
+  "block.dolt_cave_addon.thornwood_cabinet": "Thornwood Cabinet",
+
   "slabfish_variant.dolt_cave_addon.abyssal_chasm": "Abyssal Chasm",
   "slabfish_variant.dolt_cave_addon.forlorn_hollows": "Forlorn Hollows",
   "slabfish_variant.dolt_cave_addon.candy_cavity": "Candy Cavity",

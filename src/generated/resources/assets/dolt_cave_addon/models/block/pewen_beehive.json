@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "dolt_cave_addon:block/pewen_beehive_end",
+    "front": "dolt_cave_addon:block/pewen_beehive_front",
+    "particle": "dolt_cave_addon:block/pewen_beehive_side",
+    "side": "dolt_cave_addon:block/pewen_beehive_side",
+    "top": "dolt_cave_addon:block/pewen_beehive_end"
+  }
+}

@@ -8,6 +8,7 @@
     "BiomeTreatItemMixin",
     "BlockStateBaseMixin",
     "CycadMixin",
+    "DisableGlowSquidResuscitateCoral",
     "EnigmaticEngineMixin",
     "GingerbreadManMixin",
     "MarineSnowMixin",

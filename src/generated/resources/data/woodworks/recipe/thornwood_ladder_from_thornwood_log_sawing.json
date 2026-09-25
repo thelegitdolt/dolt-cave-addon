@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "woodworks:config",
+      "value": "sawmill"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": {
+    "item": "alexscaves:thornwood_log"
+  },
+  "result": {
+    "count": 4,
+    "id": "dolt_cave_addon:thornwood_ladder"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "woodworks:config",
+      "value": "wooden_boards"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dolt_cave_addon:thornwood_boards"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thornwood_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "alexscaves:thornwood_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_thornwood_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dolt_cave_addon:thornwood_boards"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dolt_cave_addon:pine_nuts_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "alexscaves:pine_nuts"
+  }
+}

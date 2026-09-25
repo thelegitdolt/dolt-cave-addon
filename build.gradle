@@ -70,7 +70,7 @@ neoForge {
 
         data {
             data()
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing-mod', 'alexscaves', '--existing', file('src/main/resources/').getAbsolutePath()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing-mod', 'alexscaves'
         }
 
         configureEach {
@@ -94,6 +94,8 @@ configurations {
 dependencies {
     implementation "com.teamabnormals:blueprint:${project.minecraft_version}-${project.blueprint}"
 
+    implementation "curse.maven:woodworks-543610:${project.woodworks}"
+    implementation "curse.maven:farmers-delight-398521:${project.fd}"
     implementation "curse.maven:alexs-caves-neo-1613404:${project.alexCaves}"
     implementation "curse.maven:caverns_and-1613404:${project.alexCaves}"
     implementation "curse.maven:citadel-331936:${project.citadel}"

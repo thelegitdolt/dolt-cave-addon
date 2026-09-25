@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "woodworks:config",
+      "value": "sawmill"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": {
+    "item": "alexscaves:pewen_log"
+  },
+  "result": {
+    "count": 4,
+    "id": "dolt_cave_addon:pewen_ladder"
+  }
+}

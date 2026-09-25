@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "woodworks:config",
+      "value": "wooden_bookshelves"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_bookshelf",
+  "key": {
+    "#": {
+      "item": "alexscaves:pewen_planks"
+    },
+    "X": {
+      "item": "minecraft:book"
+    }
+  },
+  "pattern": [
+    "###",
+    "XXX",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dolt_cave_addon:pewen_bookshelf"
+  }
+}

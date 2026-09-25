@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "woodworks:config",
+      "value": "sawmill"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "woodworks:thornwood_ladder_from_thornwood_log_sawing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thornwood_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "alexscaves:thornwood_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_thornwood_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "woodworks:thornwood_ladder_from_thornwood_log_sawing"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dolt_cave_addon:block/thornwood_chest"
+    }
+  }
+}
