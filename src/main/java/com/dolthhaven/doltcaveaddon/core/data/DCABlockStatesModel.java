@@ -1,19 +1,17 @@
 package com.dolthhaven.doltcaveaddon.core.data;
 
 import com.dolthhaven.doltcaveaddon.core.DoltCaveAddon;
-import static com.dolthhaven.doltcaveaddon.core.registry.DCABlocks.*;
-import static com.dolthhaven.doltcaveaddon.core.registry.DCABlocks.THORNWOOD_LADDER;
-
 import com.dolthhaven.doltcaveaddon.util.RegUtils;
 import com.github.alexmodguy.alexscaves.server.block.ACBlockRegistry;
 import com.teamabnormals.blueprint.core.data.client.BlueprintBlockStateProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import vectorwing.farmersdelight.common.block.CabinetBlock;
 
 import java.util.function.UnaryOperator;
+
+import static com.dolthhaven.doltcaveaddon.core.registry.DCABlocks.*;
 
 public class DCABlockStatesModel extends BlueprintBlockStateProvider {
     public DCABlockStatesModel(GatherDataEvent event) {
