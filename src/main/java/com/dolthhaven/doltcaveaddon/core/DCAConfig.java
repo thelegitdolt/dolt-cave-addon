@@ -16,7 +16,11 @@ public class DCAConfig {
 
         public final ConfigValue<Boolean> gingerBreadMenDropWindsweptCookies;
 
+        public final ConfigValue<Integer> stackSize;
+
         Common(ModConfigSpec.Builder builder) {
+            stackSize = builder.comment("The max stack size for your modpack. Should be 64. For me it's 100 cuz i'm cool like that.")
+                    .define("Max stack size", 64);
 
             builder.push("Alexander Caverns");
 
