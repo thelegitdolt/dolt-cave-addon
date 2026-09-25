@@ -1,9 +1,9 @@
 package com.dolthhaven.doltcaveaddon.core.mixin.lootchestfeature;
 
-import com.dolthhaven.dolt_mod_how.integration.DMHSpawnCompat;
 import com.dolthhaven.doltcaveaddon.core.DCATrackedData;
 import com.dolthhaven.doltcaveaddon.core.FleeingHolder;
 import com.dolthhaven.doltcaveaddon.core.registry.DCAConstants;
+import com.dolthhaven.doltcaveaddon.integration.DCASpawnCompat;
 import com.github.alexmodguy.alexscaves.server.entity.ai.AnimalLootChestsGoal;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.core.particles.ParticleTypes;
@@ -44,7 +44,7 @@ public abstract class AnimalLootChestGoalMixin extends MoveToBlockGoal {
     @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/ai/navigation/PathNavigation;stop()V", shift = At.Shift.AFTER), remap = false, cancellable = true)
     private void DoltModHow$PreventChestOpening(CallbackInfo ci, @Local BlockEntity blockEntity) {
         if (!ModList.get().isLoaded(DCAConstants.Mod.SPAWN)) return;
-        if (!DMHSpawnCompat.hasOctopus(this.entity.level(), blockEntity)) return;
+        if (!DCASpawnCompat.hasOctopus(this.entity.level(), blockEntity)) return;
 
         if (this.entity.level() instanceof ServerLevel serverLevel) {
             RandomSource rand = this.entity.getRandom();
@@ -55,7 +55,7 @@ public abstract class AnimalLootChestGoalMixin extends MoveToBlockGoal {
             }
 
             this.entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0));
-            this.entity.playSound(DMHSpawnCompat.octopusSquirtSound(), 1.0F, 1.0F);
+            this.entity.playSound(DCASpawnCompat.octopusSquirtSound(), 1.0F, 1.0F);
             if (this.entity instanceof FleeingHolder fleer) {
                 this.stop();
                 fleer.flee(this.blockPos);

@@ -1,6 +1,5 @@
-package com.dolthhaven.dolt_mod_how.integration;
+package com.dolthhaven.doltcaveaddon.integration;
 
-import com.dolthhaven.dolt_mod_how.core.registry.DMHCriteriaTriggers;
 import com.dolthhaven.doltcaveaddon.core.registry.DCACriteriaTriggers;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -8,12 +7,11 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.UUID;
 
-public class DMHSpawnCompat {
+public class DCASpawnCompat {
     public static boolean hasOctopus(Level level, BlockEntity entity) {
         try {
             Class<?> octoClass = Class.forName("com.ninni.spawn.server.entity.accessor.ChestBlockEntityAccessor");

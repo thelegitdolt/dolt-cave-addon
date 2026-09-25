@@ -1,6 +1,7 @@
 package com.dolthhaven.doltcaveaddon.core;
 
 import com.dolthhaven.doltcaveaddon.core.data.tags.DCABlockTags;
+import com.dolthhaven.doltcaveaddon.core.registry.DCACriteriaTriggers;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -19,9 +20,9 @@ public class DoltCaveAddon {
 
     public DoltCaveAddon(IEventBus bus, ModContainer modContainer) {
         bus.addListener(this::dataSetup);
-
         modContainer.registerConfig(ModConfig.Type.COMMON, DCAConfig.COMMON_SPEC);
 
+        DCACriteriaTriggers.TRIGGERS.register(bus);
         DCATrackedData.registerTrackedData();
     }
 
