@@ -1,6 +1,48 @@
 {
   "values": {
+    "dolt_cave_addon:chiseled_pewen_bookshelf": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:pewen_beehive": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:pewen_boards": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:pewen_bookshelf": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:pewen_cabinet": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:pewen_chest": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:pewen_ladder": {
+      "burn_time": 300
+    },
     "dolt_cave_addon:pine_nuts_crate": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:thornwood_beehive": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:thornwood_boards": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:thornwood_bookshelf": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:thornwood_cabinet": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:thornwood_chest": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:thornwood_ladder": {
+      "burn_time": 300
+    },
+    "dolt_cave_addon:trapped_pewen_chest": {
       "burn_time": 300
     }
   }
