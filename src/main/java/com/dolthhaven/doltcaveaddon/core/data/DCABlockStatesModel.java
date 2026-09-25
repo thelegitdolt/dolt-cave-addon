@@ -26,7 +26,6 @@ public class DCABlockStatesModel extends BlueprintBlockStateProvider {
         this.woodworksBlocks(ACBlockRegistry.PEWEN_PLANKS, PEWEN_BOARDS, PEWEN_LADDER, PEWEN_BOOKSHELF, PEWEN_BEEHIVE, PEWEN_CHEST, TRAPPED_PEWEN_CHEST);
         this.chiseledBookshelfBlock(CHISELED_PEWEN_BOOKSHELF);
 
-
         this.woodworksBlocks(ACBlockRegistry.THORNWOOD_PLANKS, THORNWOOD_BOARDS, THORNWOOD_LADDER, THORNWOOD_BOOKSHELF, THORNWOOD_BEEHIVE, THORNWOOD_CHEST, TRAPPED_THORNWOOD_CHEST);
         this.chiseledBookshelfBlock(CHISELED_THORNWOOD_BOOKSHELF);
 

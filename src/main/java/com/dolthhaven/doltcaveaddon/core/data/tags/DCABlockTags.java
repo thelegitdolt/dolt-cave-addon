@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import vectorwing.farmersdelight.common.tag.ModTags;
 
 import static com.dolthhaven.doltcaveaddon.core.registry.DCABlocks.*;
 
@@ -19,6 +20,8 @@ public class DCABlockTags extends BlockTagsProvider {
         this.tag(DCATags.Blocks.BIOME_CRUCIBLE_CAN_CONVERT)
                 .addTag(BlockTags.BASE_STONE_OVERWORLD)
                 .addTag(BlockTags.DIRT).addTag(BlockTags.SAND);
+
+        this.tag(BlockTags.MINEABLE_WITH_HOE).add(ANCIENT_LEAF_PILE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(PINE_NUTS_CRATE.get(), PEWEN_BEEHIVE.get(), PEWEN_BOOKSHELF.get(), PEWEN_CHEST.get(),
@@ -36,5 +39,6 @@ public class DCABlockTags extends BlockTagsProvider {
         this.tag(BlueprintBlockTags.WOODEN_CHISELED_BOOKSHELVES).add(CHISELED_PEWEN_BOOKSHELF.get(), CHISELED_THORNWOOD_BOOKSHELF.get());
         this.tag(BlueprintBlockTags.LEAF_PILES).add(ANCIENT_LEAF_PILE.get());
 
+        this.tag(ModTags.Blocks.CABINETS_WOODEN).add(PEWEN_CABINET.get(), THORNWOOD_CABINET.get());
     }
 }

@@ -5,6 +5,7 @@ import com.dolthhaven.doltcaveaddon.core.data.DCADataMaps;
 import com.dolthhaven.doltcaveaddon.core.data.DCALootTables;
 import com.dolthhaven.doltcaveaddon.core.data.DCARecipes;
 import com.dolthhaven.doltcaveaddon.core.data.tags.DCABlockTags;
+import com.dolthhaven.doltcaveaddon.core.data.tags.DCAItemTags;
 import com.dolthhaven.doltcaveaddon.core.registry.DCABlocks;
 import com.mojang.logging.LogUtils;
 import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
@@ -51,6 +52,7 @@ public class DoltCaveAddon {
 
         DCABlockTags taggies = new DCABlockTags(event);
         dataGen.addProvider(includeServer, taggies);
+        dataGen.addProvider(includeServer, new DCAItemTags(event, taggies));
         dataGen.addProvider(includeServer, new DCADataMaps(event));
         dataGen.addProvider(includeServer, new DCALootTables(event));
         dataGen.addProvider(includeServer, new DCARecipes(event));
