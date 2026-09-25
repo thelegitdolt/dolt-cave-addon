@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "environmental:event",
+      "events": [
+        "spawn",
+        "breed"
+      ]
+    },
+    {
+      "type": "environmental:in_biome_key",
+      "biome": "alexscaves:toxic_caves"
+    }
+  ],
+  "description": {
+    "translate": "slabfish.type.dolt_cave_addon.toxic_caves"
+  },
+  "priority": 5,
+  "texture": "dolt_cave_addon:type/toxic_caves"
+}

@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "environmental:event",
+      "events": [
+        "spawn",
+        "breed"
+      ]
+    },
+    {
+      "type": "environmental:in_biome_key",
+      "biome": "alexscaves:abyssal_chasm"
+    }
+  ],
+  "description": {
+    "translate": "slabfish.type.dolt_cave_addon.abyssal_chasm"
+  },
+  "priority": 5,
+  "texture": "dolt_cave_addon:type/abyssal_chasm"
+}

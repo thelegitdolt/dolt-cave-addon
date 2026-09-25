@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+      "layer0": "dolt_cave_addon:item/slabfish_bucket/abyssal_chasm"
+  }
+}

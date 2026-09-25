@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "environmental:event",
+      "events": [
+        "spawn",
+        "breed"
+      ]
+    },
+    {
+      "type": "environmental:in_biome_key",
+      "biome": "alexscaves:forlorn_hollows"
+    }
+  ],
+  "description": {
+    "translate": "slabfish.type.dolt_cave_addon.forlorn_hollows"
+  },
+  "priority": 5,
+  "texture": "dolt_cave_addon:type/forlorn_hollows"
+}
