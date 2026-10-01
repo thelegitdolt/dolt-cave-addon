@@ -97,7 +97,6 @@ dependencies {
     implementation "curse.maven:woodworks-543610:${project.woodworks}"
     implementation "curse.maven:farmers-delight-398521:${project.fd}"
     implementation "curse.maven:alexs-caves-neo-1613404:${project.alexCaves}"
-    implementation "curse.maven:caverns_and-1613404:${project.alexCaves}"
     implementation "curse.maven:citadel-331936:${project.citadel}"
 }
 
