@@ -29,6 +29,7 @@ public class DCADataMaps extends DataMapProvider {
                 .add(RUSTY_SCAFFOLDING.getId(), holder(provider, METAL_SCAFFOLDING), false)
                 .add(RUSTY_BARREL.getId(), holder(provider, METAL_BARREL), false)
                 .add(RUSTY_REBAR.getId(), holder(provider, METAL_REBAR), false);
+
         this.builder(NeoForgeDataMaps.COMPOSTABLES)
                 .add(PINE_NUTS_CRATE.getId(), new Compostable(1.0f), false);
 

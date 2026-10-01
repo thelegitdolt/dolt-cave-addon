@@ -2,11 +2,14 @@ package com.dolthhaven.doltcaveaddon.core.data;
 
 import com.dolthhaven.doltcaveaddon.core.DoltCaveAddon;
 import com.dolthhaven.doltcaveaddon.util.RegUtils;
+import com.github.alexmodguy.alexscaves.AlexsCaves;
 import com.github.alexmodguy.alexscaves.server.block.ACBlockRegistry;
 import com.teamabnormals.blueprint.core.data.client.BlueprintBlockStateProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import vectorwing.farmersdelight.common.block.CabinetBlock;
 
 import java.util.function.UnaryOperator;
@@ -20,6 +23,8 @@ public class DCABlockStatesModel extends BlueprintBlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        this.directionalBlockCustomBottom(PINE_NUTS_CRATE, ResourceLocation.fromNamespaceAndPath(AlexsCaves.MODID, "pewen_planks"));
+
         this.leafPileBlock(ACBlockRegistry.ANCIENT_LEAVES, ANCIENT_LEAF_PILE);
         this.woodworksBlocks(ACBlockRegistry.PEWEN_PLANKS, PEWEN_BOARDS, PEWEN_LADDER, PEWEN_BOOKSHELF, PEWEN_BEEHIVE, PEWEN_CHEST, TRAPPED_PEWEN_CHEST);
         this.chiseledBookshelfBlock(CHISELED_PEWEN_BOOKSHELF);
@@ -41,6 +46,11 @@ public class DCABlockStatesModel extends BlueprintBlockStateProvider {
         });
 
         this.blockItem(block);
+    }
+
+    private void directionalBlockCustomBottom(DeferredBlock<? extends Block> block, ResourceLocation other) {
+        ResourceLocation blockTexture = blockTexture(block.get());
+        this.directionalBlock(block, suffix(blockTexture, "_side"), other.withPrefix("block/"), suffix(blockTexture, "_top"));
     }
 
     private ResourceLocation after(Block block, String string) {
