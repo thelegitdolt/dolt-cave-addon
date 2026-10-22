@@ -13,6 +13,7 @@
     "GingerbreadManMixin",
     "MarineSnowMixin",
     "NuclearFurnaceBlockEntityMixin",
+    "PathfinderQuillMixin",
     "SackOfSatingItemMixin",
     "SubmarineMixin",
     "TremorzillaMixin",

@@ -1,7 +1,7 @@
 package com.dolthhaven.doltcaveaddon.core.data.tags;
 
 import com.dolthhaven.doltcaveaddon.core.DoltCaveAddon;
-import com.dolthhaven.doltcaveaddon.core.registry.DCAConstants;
+import com.dolthhaven.doltcaveaddon.core.registry.Consts;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -18,7 +18,7 @@ public class DCATags {
     }
 
     public static class Items {
-        public static TagKey<Item> COPPER_INGOTS = ext(DCAConstants.Mod.CAVERNS_AND_CHASMS, "copper_ingots");
+        public static TagKey<Item> COPPER_INGOTS = ext(Consts.Mod.CAVERNS_AND_CHASMS.id(), "copper_ingots");
 
         public static TagKey<Item> itemTag(String path) {
             return TagKey.create(Registries.ITEM, DoltCaveAddon.rl(path));

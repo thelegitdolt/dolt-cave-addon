@@ -2,7 +2,7 @@ package com.dolthhaven.doltcaveaddon.core.mixin.lootchestfeature;
 
 import com.dolthhaven.doltcaveaddon.core.DCATrackedData;
 import com.dolthhaven.doltcaveaddon.core.FleeingHolder;
-import com.dolthhaven.doltcaveaddon.core.registry.DCAConstants;
+import com.dolthhaven.doltcaveaddon.core.registry.Consts;
 import com.dolthhaven.doltcaveaddon.integration.DCASpawnCompat;
 import com.github.alexmodguy.alexscaves.server.entity.ai.AnimalLootChestsGoal;
 import com.llamalad7.mixinextras.sugar.Local;
@@ -43,7 +43,7 @@ public abstract class AnimalLootChestGoalMixin extends MoveToBlockGoal {
 
     @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/ai/navigation/PathNavigation;stop()V", shift = At.Shift.AFTER), remap = false, cancellable = true)
     private void DoltModHow$PreventChestOpening(CallbackInfo ci, @Local BlockEntity blockEntity) {
-        if (!ModList.get().isLoaded(DCAConstants.Mod.SPAWN)) return;
+        if (!Consts.Mod.SPAWN.loaded()) return;
         if (!DCASpawnCompat.hasOctopus(this.entity.level(), blockEntity)) return;
 
         if (this.entity.level() instanceof ServerLevel serverLevel) {

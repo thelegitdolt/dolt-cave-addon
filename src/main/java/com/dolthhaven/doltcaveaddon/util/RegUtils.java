@@ -23,4 +23,8 @@ public class RegUtils {
         if (item == Items.AIR && !location.equals(BuiltInRegistries.ITEM.getDefaultKey())) return null;
         return BuiltInRegistries.ITEM.get(location);
     }
+
+    public static ResourceLocation itemId(Item item) {
+        return BuiltInRegistries.ITEM.getKey(item);
+    }
 }

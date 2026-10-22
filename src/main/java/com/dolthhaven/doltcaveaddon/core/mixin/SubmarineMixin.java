@@ -1,7 +1,7 @@
 package com.dolthhaven.doltcaveaddon.core.mixin;
 
 import com.dolthhaven.doltcaveaddon.core.data.tags.DCATags;
-import com.dolthhaven.doltcaveaddon.core.registry.DCAConstants;
+import com.dolthhaven.doltcaveaddon.core.registry.Consts;
 import com.dolthhaven.doltcaveaddon.integration.DCACCCompat;
 import com.github.alexmodguy.alexscaves.server.entity.item.SubmarineEntity;
 import com.github.alexmodguy.alexscaves.server.misc.ACSoundRegistry;
@@ -31,7 +31,7 @@ public abstract class SubmarineMixin {
     @ModifyArg(method = "interact", at = @At(value = "INVOKE", target = "Lcom/github/alexmodguy/alexscaves/server/entity/item/SubmarineEntity;playSound(Lnet/minecraft/sounds/SoundEvent;FF)V"))
     private SoundEvent DoltModHow$SameSoundEffectPlease(SoundEvent soundEvent) {
         if (soundEvent == ACSoundRegistry.SUBMARINE_REPAIR.get()) {
-            SoundEvent newEvent = BuiltInRegistries.SOUND_EVENT.get(DCAConstants.Reg.COPPER_GOLEM_REPAIR);
+            SoundEvent newEvent = BuiltInRegistries.SOUND_EVENT.get(Consts.Reg.COPPER_GOLEM_REPAIR);
             soundEvent = newEvent == null ? soundEvent : newEvent;
         }
         return soundEvent;
@@ -43,13 +43,13 @@ public abstract class SubmarineMixin {
     @Expression("itemStack.is(COPPER_INGOT)")
     @WrapOperation(method = "interact", at = @At("MIXINEXTRAS:EXPRESSION"))
     private boolean DoltModHow$SameSoundEffectPlease(ItemStack instance, Item item, Operation<Boolean> original) {
-        if (DCAConstants.Mod.ccloaded()) return instance.is(DCATags.Items.COPPER_INGOTS);
+        if (Consts.Mod.CAVERNS_AND_CHASMS.loaded()) return instance.is(DCATags.Items.COPPER_INGOTS);
         return original.call(instance, item);
     }
 
     @ModifyArg(method = "hurt", at = @At(value = "INVOKE", target = "Lcom/github/alexmodguy/alexscaves/server/entity/item/SubmarineEntity;spawnAtLocation(Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/world/entity/item/ItemEntity;"))
     private ItemLike item(ItemLike par1) {
-        if (DCAConstants.Mod.ccloaded()) {
+        if (Consts.Mod.CAVERNS_AND_CHASMS.loaded()) {
             int oxy = this.getOxidizationLevel();
             int waxed = this.isWaxed() ? 4 : 0;
             return DCACCCompat.COPPER_INGOTS.get().get(oxy + waxed);
