@@ -1,0 +1,20 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dolt_cave_addon:item/golden_purple_soda_bucket0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "caverns_and_chasms:level": 1
+      },
+      "model": "dolt_cave_addon:item/golden_purple_soda_bucket1"
+    },
+    {
+      "predicate": {
+        "caverns_and_chasms:level": 2
+      },
+      "model": "dolt_cave_addon:item/golden_purple_soda_bucket2"
+    }
+  ]
+}

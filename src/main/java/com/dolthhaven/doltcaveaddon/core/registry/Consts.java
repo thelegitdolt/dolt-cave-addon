@@ -17,6 +17,7 @@ public class Consts {
 
     public static class Reg {
         public static final ResourceLocation COPPER_GOLEM_REPAIR = Mod.CAVERNS_AND_CHASMS.rl("entity.copper_golem.repair");
+        public static final ResourceLocation GOLDEN_LAVA_BUCKET = Mod.CAVERNS_AND_CHASMS.rl("golden_lava_bucket");
         public static final ResourceLocation GINGERBREAD_COOKIE = Mod.WINDSWEPT.rl("gingerbread_cookie");
         public static final ResourceLocation PATHFINDER_QUILL = Mod.QUARK.rl("pathfinders_quill");
     }

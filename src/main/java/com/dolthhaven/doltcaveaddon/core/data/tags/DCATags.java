@@ -20,6 +20,9 @@ public class DCATags {
     public static class Items {
         public static TagKey<Item> COPPER_INGOTS = ext(Consts.Mod.CAVERNS_AND_CHASMS.id(), "copper_ingots");
 
+        public static final TagKey<Item> BUCKETS_ACID = ext("c", "buckets/acid");
+        public static final TagKey<Item> BUCKETS_PURPLE_SODA = ext("c", "buckets/purple_soda");
+
         public static TagKey<Item> itemTag(String path) {
             return TagKey.create(Registries.ITEM, DoltCaveAddon.rl(path));
         }

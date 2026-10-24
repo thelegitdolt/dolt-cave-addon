@@ -44,19 +44,26 @@ config="${mod_id}.mixins.json"
     modId="alexscaves"
     type="required"
     versionRange="[2.0.0,)"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="caverns_and_chasms"
+    type="required"
+    ordering="AFTER"
+    side="BOTH"
+
 
 [[dependencies.${mod_id}]]
     modId="blueprint"
     type="required"
     versionRange="[8.1.0,)"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
 
 [[dependencies.${mod_id}]]
     modId="citadel"
     type="required"
     versionRange="[2.7.1,)"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
