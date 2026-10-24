@@ -93,8 +93,9 @@ public class DCABlocks {
                 .tab(CreativeModeTabs.REDSTONE_BLOCKS)
                   .addItemsAfter(of(Blocks.TRAPPED_CHEST), TRAPPED_PEWEN_CHEST, TRAPPED_THORNWOOD_CHEST)
 
-                .addItemsAfter(ofID(Consts.Reg.GOLDEN_LAVA_BUCKET, Consts.Mod.CAVERNS_AND_CHASMS.id()),
-                        GOLDEN_ACID_BUCKET, GOLDEN_PURPLE_SODA_BUCKET)
+                .tab(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                    .addItemsAfter(ofID(Consts.Reg.GOLDEN_LAVA_BUCKET, Consts.Mod.CAVERNS_AND_CHASMS.id()),
+                            GOLDEN_ACID_BUCKET, GOLDEN_PURPLE_SODA_BUCKET)
                 .predicate(DCABlocks::fdPredicate)
                    .addItemsBefore(of(ModItems.BAMBOO_CABINET.get()), PEWEN_CABINET, THORNWOOD_CABINET);
 
