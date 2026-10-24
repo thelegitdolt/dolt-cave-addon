@@ -49,10 +49,9 @@ config="${mod_id}.mixins.json"
 
 [[dependencies.${mod_id}]]
     modId="caverns_and_chasms"
-    type="required"
+    type="optional"
     ordering="AFTER"
     side="BOTH"
-
 
 [[dependencies.${mod_id}]]
     modId="blueprint"
