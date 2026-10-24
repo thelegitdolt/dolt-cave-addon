@@ -1,7 +1,7 @@
 package com.dolthhaven.doltcaveaddon.core.mixin.lootchestfeature;
 
 import com.dolthhaven.doltcaveaddon.core.DCATrackedData;
-import com.dolthhaven.doltcaveaddon.core.FleeingHolder;
+import com.dolthhaven.doltcaveaddon.core.parasites.FleeingHolder;
 import com.dolthhaven.doltcaveaddon.core.registry.Consts;
 import com.dolthhaven.doltcaveaddon.integration.DCASpawnCompat;
 import com.github.alexmodguy.alexscaves.server.entity.ai.AnimalLootChestsGoal;
@@ -15,7 +15,6 @@ import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.MoveToBlockGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.neoforged.fml.ModList;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;

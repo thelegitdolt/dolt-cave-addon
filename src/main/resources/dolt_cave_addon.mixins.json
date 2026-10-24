@@ -2,6 +2,7 @@
   "required": true,
   "package": "com.dolthhaven.doltcaveaddon.core.mixin",
   "compatibilityLevel": "JAVA_21",
+  "plugin": "com.dolthhaven.doltcaveaddon.core.mixin.plugin.DCAMixinPlugin",
   "mixins": [
     "AcidBlockMixin",
     "BiomeCrucibleMixin",

@@ -1,4 +1,4 @@
-package com.dolthhaven.doltcaveaddon.core;
+package com.dolthhaven.doltcaveaddon.core.parasites;
 
 import net.minecraft.core.BlockPos;
 

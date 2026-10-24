@@ -2,46 +2,43 @@ package com.dolthhaven.doltcaveaddon.core.mixin;
 
 import com.github.alexmodguy.alexscaves.server.item.RadioactiveOnDestroyedBlockItem;
 import com.ninni.etcetera.block.entity.PricklyCanBlockEntity;
-import com.ninni.etcetera.client.gui.screen.PricklyCanScreen;
 import com.ninni.etcetera.client.gui.screen.PricklyCanScreenHandler;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.components.Button;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.Container;
-import net.minecraft.world.RandomizableContainer;
+import net.minecraft.network.protocol.game.ServerboundContainerButtonClickPacket;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.network.ServerGamePacketListenerImpl;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.ButtonBlock;
-import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
-import org.spongepowered.asm.mixin.*;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Pseudo;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Pseudo
-@Mixin(targets = "com.ninni.etcetera.client.gui.screen.PricklyCanScreen.DeleteButtonWidget")
+@Mixin(ServerGamePacketListenerImpl.class)
 public class C2SPricklyCanMixin {
     @Shadow
-    @Final
-    private PricklyCanScreen this$0;
+    public ServerPlayer player;
 
-    @Inject(method = "onPress", at = @At(value = "HEAD"))
-    private void DoltModHow$ExplodeIfYouSeeRadioactiveStuff(CallbackInfo ci) {
-        if (this.this$0.getMenu() instanceof PricklyCanScreenHandler menu && menu.getInventory() instanceof Container container) {
-            for (int i = 0; i <  container.getContainerSize(); i++) {
-                ItemStack stack = container.getItem(i);
-//
-//                if (explodePricklyCan(stack, i, )) {
-//                    return;
-//                }
+    @Inject(method = "handleContainerButtonClick", at = @At(value = "HEAD"), cancellable = true)
+    private void DoltModHow$ExplodeIfYouSeeRadioactiveStuff(ServerboundContainerButtonClickPacket packet, CallbackInfo ci) {
+        if (this.player.containerMenu instanceof PricklyCanScreenHandler menu && packet.buttonId() == 1) {
+            if (menu.getInventory() instanceof PricklyCanBlockEntity can) {
+                for (int i = 0; i < menu.getInventory().getContainerSize(); i++) {
+                    if (explodePricklyCan(menu.getInventory().getItem(i), i, can)) {
+                        ci.cancel();
+                    }
+                }
             }
         }
     }
 
     @Unique
-    private static boolean explodePricklyCan(ItemStack stack, int index, RandomizableContainer can) {
+    private static boolean explodePricklyCan(ItemStack stack, int index, PricklyCanBlockEntity can) {
         if (stack.getItem() instanceof RadioactiveOnDestroyedBlockItem radioactiveItem) {
             Level level = can.getLevel();
             BlockPos pos = can.getBlockPos();
