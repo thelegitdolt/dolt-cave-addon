@@ -29,9 +29,9 @@ public class DCAItemTags extends ItemTagsProvider {
         copy(BlueprintBlockTags.LEAF_PILES, BlueprintItemTags.LEAF_PILES);
         copy(ModTags.Blocks.CABINETS_WOODEN, ModTags.Items.CABINETS_WOODEN);
 
+        this.tag(ModTags.Items.KNIFE_ENCHANTABLE).add(ACItemRegistry.DESOLATE_DAGGER.get());
         this.tag(ItemTags.PIGLIN_LOVED).add(GOLDEN_ACID_BUCKET.get(), GOLDEN_ACID_BUCKET.get());
         this.tag(DCATags.Items.BUCKETS_ACID).add(GOLDEN_ACID_BUCKET.get(), ACItemRegistry.ACID_BUCKET.get());
         this.tag(DCATags.Items.BUCKETS_PURPLE_SODA).add(GOLDEN_PURPLE_SODA_BUCKET.get(), ACItemRegistry.PURPLE_SODA_BUCKET.get());
-
     }
 }
