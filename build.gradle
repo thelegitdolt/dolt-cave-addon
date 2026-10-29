@@ -96,6 +96,7 @@ dependencies {
 
     implementation "curse.maven:woodworks-543610:${project.woodworks}"
     implementation "curse.maven:etcetera-891054:${project.etcetera}"
+    implementation "curse.maven:dolts-metadelights-1727680:${project.doltmetadelights}"
     implementation "curse.maven:quark-243121:${project.quark}"
     implementation "curse.maven:zeta-968868:${project.zeta}"
     implementation "curse.maven:yacl-667299:7437845"

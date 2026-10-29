@@ -1,6 +1,6 @@
 package com.dolthhaven.doltcaveaddon.core.mixin.lootchestfeature;
 
-import com.dolthhaven.doltcaveaddon.core.DCATrackedData;
+import com.dolthhaven.doltcaveaddon.core.other.DCATrackedData;
 import com.dolthhaven.doltcaveaddon.core.parasites.FleeingHolder;
 import com.dolthhaven.doltcaveaddon.core.registry.Consts;
 import com.dolthhaven.doltcaveaddon.integration.DCASpawnCompat;

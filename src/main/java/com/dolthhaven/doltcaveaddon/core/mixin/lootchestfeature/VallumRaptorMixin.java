@@ -1,6 +1,6 @@
 package com.dolthhaven.doltcaveaddon.core.mixin.lootchestfeature;
 
-import com.dolthhaven.doltcaveaddon.core.DCATrackedData;
+import com.dolthhaven.doltcaveaddon.core.other.DCATrackedData;
 import com.dolthhaven.doltcaveaddon.core.parasites.FleeingHolder;
 import com.github.alexmodguy.alexscaves.server.entity.living.VallumraptorEntity;
 import com.github.alexmodguy.alexscaves.server.misc.ACSoundRegistry;

@@ -11,9 +11,19 @@ public class DCAMixinPlugin implements IMixinConfigPlugin {
     @Override
     public void onLoad(String mixinPackage) {}
 
-    private boolean etceteraloaded() {
+    private static boolean etceteraloaded() {
         try {
             Class.forName("com.ninni.etcetera.Etcetera");
+            return true;
+        } catch (ClassNotFoundException e) {
+            return false;
+        }
+    }
+
+    private static boolean doltsmetadelightsanddungeonsdelightloaded() {
+        try {
+            Class.forName("com.dolthhaven.doltmetadelights.DoltsMetadelights");
+            Class.forName("net.yirmiri.dungeonsdelight.DungeonsDelight");
             return true;
         } catch (ClassNotFoundException e) {
             return false;
@@ -29,6 +39,8 @@ public class DCAMixinPlugin implements IMixinConfigPlugin {
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         if (mixinClassName.equals("com.dolthhaven.doltcaveaddon.core.mixin.C2SPricklyCanMixin")) {
             return etceteraloaded();
+        } else if (mixinClassName.equals("com.dolthhaven.doltcaveaddon.core.mixin.DesolateDaggerMixin")) {
+            return doltsmetadelightsanddungeonsdelightloaded();
         }
         return true;
     }
