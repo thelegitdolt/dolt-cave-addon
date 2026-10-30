@@ -10,7 +10,6 @@
     "BlockStateBaseMixin",
     "C2SPricklyCanMixin",
     "CycadMixin",
-    "DesolateDaggerMixin",
     "DisableGlowSquidResuscitateCoral",
     "EnigmaticEngineMixin",
     "GingerbreadManMixin",

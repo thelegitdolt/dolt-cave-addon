@@ -2,13 +2,11 @@ package com.dolthhaven.doltcaveaddon.core.mixin.dungeonsdelight;
 
 import com.dolthhaven.doltmetadelights.core.other.DMDTrackedData;
 import com.github.alexmodguy.alexscaves.server.enchantment.ACEnchantmentRegistry;
-import com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry;
-import com.github.alexmodguy.alexscaves.server.entity.item.DesolateDaggerEntity;
+import com.github.alexmodguy.alexscaves.server.item.ACItemRegistry;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.teamabnormals.blueprint.common.world.storage.tracking.IDataManager;
-import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
@@ -17,19 +15,15 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.Level;
 import net.yirmiri.dungeonsdelight.common.entity.misc.CleaverEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Pseudo
 @Mixin(CleaverEntity.class)
 public abstract class CleaverEntityMixin extends AbstractArrow {
-    @Shadow public ItemStack cleaverItem;
-
     protected CleaverEntityMixin(EntityType<? extends AbstractArrow> p_36721_, Level p_36722_) {
         super(p_36721_, p_36722_);
     }
@@ -44,31 +38,34 @@ public abstract class CleaverEntityMixin extends AbstractArrow {
         byte impendingStab = cleaverData.getValue(DMDTrackedData.LEVEL_IMPENDING_STAB);
         byte satedBlade = cleaverData.getValue(DMDTrackedData.LEVEL_SATED_BLADE);
 
-        if (desolateDagger) {
-            ItemStack stack = cleaverItem.copy();
-            decode(level(), cleaverItem, impendingStab, satedBlade);
-            summonHoveringKnives(owner, hurtEntity, stack, doubleStab, impendingStab);
+        if (desolateDagger && owner instanceof LivingEntity livingOwner) {
+            ItemStack stack = ACItemRegistry.DESOLATE_DAGGER.get().getDefaultInstance();
+            decode(level(), stack, impendingStab, satedBlade, doubleStab);
+            summonHoveringKnives(livingOwner, hurtEntity, stack);
         }
     }
 
-    private static void decode(Level level, ItemStack stack, int impendingStab, int satedBlade) {
-        Holder<Enchantment> stab = level.registryAccess().registryOrThrow(Registries.ENCHANTMENT).getHolderOrThrow(ACEnchantmentRegistry.IMPENDING_STAB);
-        Holder<Enchantment> sate = level.registryAccess().registryOrThrow(Registries.ENCHANTMENT).getHolderOrThrow(ACEnchantmentRegistry.SATED_BLADE);
-        stack.enchant(stab, impendingStab);
-        stack.enchant(sate, satedBlade);
+    private static void decode(Level level, ItemStack stack, int impendingStab, int satedBlade, int doubleStab) {
+        var enchantments = level.registryAccess().registryOrThrow(Registries.ENCHANTMENT);
+        enchantments.getHolder(ACEnchantmentRegistry.IMPENDING_STAB)
+                .ifPresent(enchant -> stack.enchant(enchant, impendingStab));
+        enchantments.getHolder(ACEnchantmentRegistry.SATED_BLADE)
+                .ifPresent(sate -> stack.enchant(sate, satedBlade));
+        enchantments.getHolder(ACEnchantmentRegistry.DOUBLE_STAB)
+                .ifPresent(dubs -> stack.enchant(dubs, doubleStab));
     }
 
-
-    private static void summonHoveringKnives(Entity player, LivingEntity entity, ItemStack stack, int doubleStab, int delayedLevel) {
-        for (int i = 0; i < 1 + doubleStab; ++i) {
-            DesolateDaggerEntity daggerEntity = ACEntityRegistry.DESOLATE_DAGGER.get().create(player.level());
-            if (daggerEntity == null) return;
-
-            daggerEntity.setTargetId(entity.getId());
-            daggerEntity.copyPosition(player);
-            daggerEntity.setItemStack(stack);
-            daggerEntity.orbitFor = (delayedLevel > 0 ? 40 : 20) + player.getRandom().nextInt(10);
-            player.level().addFreshEntity(daggerEntity);
-        }
+    private static void summonHoveringKnives(LivingEntity player, LivingEntity entity, ItemStack stack) {
+        ACItemRegistry.DESOLATE_DAGGER.get().hurtEnemy(stack, entity, player);
+        //        for (int i = 0; i < 1 + doubleStab; ++i) {
+//            DesolateDaggerEntity daggerEntity = ACEntityRegistry.DESOLATE_DAGGER.get().create(player.level());
+//            if (daggerEntity == null) return;
+//
+//            daggerEntity.setTargetId(entity.getId());
+//            daggerEntity.copyPosition(player);
+//            daggerEntity.setItemStack(stack);
+//            daggerEntity.orbitFor = (delayedLevel > 0 ? 40 : 20) + player.getRandom().nextInt(10);
+//            player.level().addFreshEntity(daggerEntity);
+//        }
     }
 }
