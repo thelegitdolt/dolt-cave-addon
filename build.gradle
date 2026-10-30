@@ -116,12 +116,11 @@ dependencies {
     implementation "curse.maven:alexs-caves-neo-1613404:${project.alexCaves}"
     implementation "curse.maven:citadel-331936:${project.citadel}"
 
-    implementation "curse.maven:dolts-metadelights-1727680:${project.doltmetadelights}"
-
 
     implementation "maven.modrinth:runiclib:${project.runiclib}"
     implementation "maven.modrinth:dungeons_delight:${project.dungeonsdelight}"
 
+    implementation 'com.dolthhaven.doltmetadelights:DoltsMetaDelights:1.1.1'
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
