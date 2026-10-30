@@ -39,7 +39,8 @@ public class DCAMixinPlugin implements IMixinConfigPlugin {
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         if (mixinClassName.equals("com.dolthhaven.doltcaveaddon.core.mixin.C2SPricklyCanMixin")) {
             return etceteraloaded();
-        } else if (mixinClassName.equals("com.dolthhaven.doltcaveaddon.core.mixin.DesolateDaggerMixin")) {
+        }
+        if (mixinClassName.equals("com.dolthhaven.doltcaveaddon.core.mixin.dungeonsdelight.CleaverEntityMixin")) {
             return doltsmetadelightsanddungeonsdelightloaded();
         }
         return true;
