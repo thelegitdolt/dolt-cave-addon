@@ -33,6 +33,17 @@ repositories {
             }
         }
     }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 
     maven { url = "https://maven.blamejared.com/" }
     maven { url = "https://modmaven.dev" }
@@ -104,6 +115,10 @@ dependencies {
     implementation "curse.maven:farmers-delight-398521:${project.fd}"
     implementation "curse.maven:alexs-caves-neo-1613404:${project.alexCaves}"
     implementation "curse.maven:citadel-331936:${project.citadel}"
+
+
+    implementation "maven.modrinth:dungeons_delight:${project.dungeonsdelight}"
+    implementation "maven.modrinth:runiclib:${project.runiclib}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
