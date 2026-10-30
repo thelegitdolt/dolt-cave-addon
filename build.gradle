@@ -21,30 +21,18 @@ sourceSets.main.resources {
 }
 
 repositories {
-    exclusiveContent {
-        forRepository {
-            maven {
-                name = "Modrinth"
-                url = "https://api.modrinth.com/maven"
+    repositories {
+        exclusiveContent {
+            forRepository {
+                maven {
+                    url "https://cursemaven.com"
+                }
+            }
+            filter {
+                includeGroup "curse.maven"
             }
         }
-        filter {
-            includeGroup "maven.modrinth"
-        }
     }
-
-    exclusiveContent {
-        forRepository {
-            maven {
-                url "https://cursemaven.com"
-            }
-        }
-        filter {
-            includeGroup "curse.maven"
-        }
-    }
-
-    mavenLocal()
 
     maven { url = "https://maven.blamejared.com/" }
     maven { url = "https://modmaven.dev" }
@@ -108,6 +96,7 @@ dependencies {
 
     implementation "curse.maven:woodworks-543610:${project.woodworks}"
     implementation "curse.maven:etcetera-891054:${project.etcetera}"
+    implementation "curse.maven:dolts-metadelights-1727680:${project.doltmetadelights}"
     implementation "curse.maven:quark-243121:${project.quark}"
     implementation "curse.maven:zeta-968868:${project.zeta}"
     implementation "curse.maven:yacl-667299:7437845"
@@ -115,12 +104,6 @@ dependencies {
     implementation "curse.maven:farmers-delight-398521:${project.fd}"
     implementation "curse.maven:alexs-caves-neo-1613404:${project.alexCaves}"
     implementation "curse.maven:citadel-331936:${project.citadel}"
-
-
-    implementation "maven.modrinth:runiclib:${project.runiclib}"
-    implementation "maven.modrinth:dungeons_delight:${project.dungeonsdelight}"
-
-    implementation 'com.dolthhaven.doltmetadelights:DoltsMetaDelights:1.1.1'
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
