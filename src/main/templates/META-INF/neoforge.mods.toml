@@ -48,6 +48,13 @@ config="${mod_id}.mixins.json"
     side="BOTH"
 
 [[dependencies.${mod_id}]]
+    modId="dolts_metadelights"
+    type="optional"
+    versionRange="[1.1.2,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
     modId="caverns_and_chasms"
     type="optional"
     ordering="AFTER"
